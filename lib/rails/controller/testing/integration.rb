@@ -10,7 +10,7 @@ module Rails
         http_verbs.each do |method|
           define_method(method) do |*args|
             reset_template_assertion
-            super(*args)
+            super(**args)
           end
         end
       end
